@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         YearLabel.text = String(Int(DateSlider.value))
         ChangeImage1.image = UIImage(named: "\( Int(DateSlider.value)).png")
         let CI2 = "dad_"+String(Int(DateSlider.value))
+        //照片是以民國年來命名，拔拔的照片名稱前再加上"dad_"的字串
         // print(CI2)
         ChangeImage2.image = UIImage(named: CI2 + ".png")
         }
@@ -43,8 +44,10 @@ class ViewController: UIViewController {
         //print(str)
         let dpyear = Int(str)
         let xx = Int(dpyear! - 1911)
+        //將西元年轉換為民國年，將dpyear-1911
         //print(xx)
         let CI3 = "dad_" + String(xx)
+        //照片是以民國年來命名，拔拔的照片名稱前再加上"dad_"的字串
         //print(CI3)
         ChangeImage1.image =  UIImage(named: "\(Int(xx)).png")
         ChangeImage2.image = UIImage(named: CI3 + ".png")
